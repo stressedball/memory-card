@@ -1,29 +1,125 @@
-body, #root {
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Monoton&family=Quicksand&family=Righteous&display=swap');
+
+body,
+#root {
     margin: 0;
     padding: 0;
+    background-color: black;
+    color: white;
 }
+
 .App {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
     align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+
 }
+
+footer {
+    flex: 0 1 auto;
+    padding: 0.4rem;
+}
+
+#header {
+    flex: 0 1 auto;
+}
+
+#header p {
+    font-family: 'Monoton', cursive;
+    font-size: 3rem;
+}
+
+#content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #info {
-    display : flex;
+    display: flex;
     flex-direction: row;
     gap: 1rem;
     flex: 0 1 auto;
+    padding: 2rem;
+    font-size: 1.3rem;
 }
+
 #deck {
-    flex : 1 0 auto;
+    flex: 1 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
     padding: 5rem;
+    gap: 1rem;
+    width: 60vw;
 }
+
 button {
-    height: 3rem;
-    width: 5rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+#next-screen {
+    animation: fadeIn 1600ms forwards linear;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    gap: 1.5rem;
+}
+
+#text {
+    text-align: center;
+}
+
+img[alt="heart"] {
+    height: 1.3rem;
+}
+
+img.light {
+    filter: invert(100%) sepia(17%) saturate(343%) hue-rotate(232deg) brightness(115%) contrast(100%);
+}
+
+img.dim {
+    filter: invert(17%) sepia(48%) saturate(4620%) hue-rotate(337deg) brightness(100%) contrast(117%);
 }

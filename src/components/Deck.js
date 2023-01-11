@@ -1,7 +1,6 @@
-function Deck({deck, trackScore, trackDeck}) {
-  deck = shuffleDeck(deck)
+function Deck({ deck, trackScore, trackDeck }) {
+    deck = shuffleDeck(deck)
     const clickHandle = (e) => {
-        console.log(deck);
         const card = deck.filter((el) => el.id === e.target.id);
         if (card[0].isClicked === true) trackScore(-1);
         if (card[0].isClicked === false) {
@@ -11,14 +10,13 @@ function Deck({deck, trackScore, trackDeck}) {
         }
     };
     const cards = deck.map((el) => (
-        <button key={el.id} id={el.id} onClick={clickHandle}>
-            {el.text}
-        </button>
+        <>
+            <div className="img-container">
+                <img src={el.image} key={el.id} id={el.id} onClick={clickHandle} alt="card"></img>
+            </div>
+        </>
     ));
     return (
-        // <div className="img-container">
-        //     <img src="" id={id} onClick={tagCard}></img>
-        // </div>
         <div id="deck">{cards}</div>
     );
 }
