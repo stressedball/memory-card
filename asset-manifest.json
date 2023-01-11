@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.35359c49.css",
+    "main.js": "/memory-card/static/js/main.fd12cfd0.js",
+    "static/media/finn.png": "/memory-card/static/media/finn.0e7fb87771177fd282f2.png",
+    "static/media/darth-vader.png": "/memory-card/static/media/darth-vader.e4684d4a8e18d10df90c.png",
+    "static/media/boba.png": "/memory-card/static/media/boba.97eae31657f9f2765a20.png",
+    "static/media/r2c3.png": "/memory-card/static/media/r2c3.c4acd12a05b9cda2ea6b.png",
+    "static/media/poe.png": "/memory-card/static/media/poe.a10046383eb2af55c4c4.png",
+    "static/media/obi-wan.png": "/memory-card/static/media/obi-wan.b20f85cae3f9f0a29e6a.png",
+    "static/media/luke.png": "/memory-card/static/media/luke.3bb8305e46f489ea6c20.png",
+    "static/media/stormtrooper.png": "/memory-card/static/media/stormtrooper.1bca46f89c601d304a41.png",
+    "static/media/rey.png": "/memory-card/static/media/rey.b0b7ecc9324472f9fc33.png",
+    "static/media/chewbacca.png": "/memory-card/static/media/chewbacca.2e712af7c9524aa23902.png",
+    "static/media/kylo.png": "/memory-card/static/media/kylo.fcdac7a0e04b9b1693b1.png",
+    "static/media/leia.png": "/memory-card/static/media/leia.4a6da2fd22b4513fe193.png",
+    "static/media/solo.png": "/memory-card/static/media/solo.533c46b08cc5d7e5aa65.png",
+    "static/media/yoda.png": "/memory-card/static/media/yoda.da84600981bbdfeb1841.png",
+    "static/media/BB.png": "/memory-card/static/media/BB.8f765596baa87a65caf1.png",
+    "static/media/lightsaber.svg": "/memory-card/static/media/lightsaber.d03985a408b74066b56f362c1a28fd4d.svg",
+    "index.html": "/memory-card/index.html",
+    "main.35359c49.css.map": "/memory-card/static/css/main.35359c49.css.map",
+    "main.fd12cfd0.js.map": "/memory-card/static/js/main.fd12cfd0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35359c49.css",
+    "static/js/main.fd12cfd0.js"
+  ]
+}
