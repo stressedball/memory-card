@@ -1,0 +1,29 @@
+body, #root {
+    margin: 0;
+    padding: 0;
+}
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    align-items: center;
+}
+#info {
+    display : flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex: 0 1 auto;
+}
+#deck {
+    flex : 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 5rem;
+}
+button {
+    height: 3rem;
+    width: 5rem;
+}
