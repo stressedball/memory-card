@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/memory-card/static/css/main.7f7231c3.css",
-    "main.js": "/memory-card/static/js/main.e69fea12.js",
+    "main.js": "/memory-card/static/js/main.d7e01731.js",
     "static/media/finn.png": "/memory-card/static/media/finn.0e7fb87771177fd282f2.png",
     "static/media/darth-vader.png": "/memory-card/static/media/darth-vader.e4684d4a8e18d10df90c.png",
     "static/media/boba.png": "/memory-card/static/media/boba.97eae31657f9f2765a20.png",
@@ -20,10 +20,10 @@
     "static/media/lightsaber.svg": "/memory-card/static/media/lightsaber.d03985a408b74066b56f362c1a28fd4d.svg",
     "index.html": "/memory-card/index.html",
     "main.7f7231c3.css.map": "/memory-card/static/css/main.7f7231c3.css.map",
-    "main.e69fea12.js.map": "/memory-card/static/js/main.e69fea12.js.map"
+    "main.d7e01731.js.map": "/memory-card/static/js/main.d7e01731.js.map"
   },
   "entrypoints": [
     "static/css/main.7f7231c3.css",
-    "static/js/main.e69fea12.js"
+    "static/js/main.d7e01731.js"
   ]
 }
