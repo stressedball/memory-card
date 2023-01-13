@@ -6,7 +6,7 @@ import Info from './components/Info';
 
 function App() {
   let display = null;
-  const [status, setStatus] = useState(3)
+  const [status, setStatus] = useState(0)
   // status 0 : startGame button  
   // status 1 : GameBoard
   const [level, setLevel] = useState(1)
