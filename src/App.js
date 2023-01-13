@@ -9,7 +9,7 @@ function App() {
   const [status, setStatus] = useState(1)
   // status 0 : startGame button  
   // status 1 : GameBoard
-  const [level, setLevel] = useState(5)
+  const [level, setLevel] = useState(1)
   const [score, setScore] = useState(0)
   const [bestScore, setBestScore] = useState(0)
   const [hearts, setHearts] = useState(3)
@@ -44,7 +44,7 @@ function App() {
   }, [level])
 
   if (score > bestScore) setBestScore(score)
-  
+
   if (status === 0) display = <IntroScreen startGame={startGame} />
   if (status === 1) {
     display =
