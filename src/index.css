@@ -74,7 +74,7 @@ button:hover {
 }
 
 #next-screen {
-    animation: fadeIn 1600ms forwards linear;
+    /* animation: fadeIn 1600ms forwards linear; */
 }
 
 @keyframes fadeIn {
@@ -122,4 +122,14 @@ img.light {
 
 img.dim {
     filter: invert(17%) sepia(48%) saturate(4620%) hue-rotate(337deg) brightness(100%) contrast(117%);
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+#game > div{
+    text-align: center;
 }

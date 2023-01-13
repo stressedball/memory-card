@@ -1,8 +1,9 @@
-function NextLevelScreen({ level }) {
+function NextLevelScreen({ level, setDeckDisplay }) {
+    setDeckDisplay(level)
     return (
         <div id="next-screen">
-            <p>Nicely Done!</p>
-            <h3>Advancing to level {level}</h3>
+            <h3>Nicely Done!</h3>
+            <p>Advancing to level {level}</p>
         </div>
     )
 }
@@ -12,7 +13,10 @@ function GameOver({ score, bestScore, status, newGame, message }) {
     }
     return (
         <div id="game">
-            <h2>Game Over! You {status}!</h2>
+            <div>
+                <h2>Game Over!</h2>
+                <h2>You {status}!</h2>
+            </div>
             <div id="result">
                 <p>SCORE : {score}</p>
                 <p>BEST : {bestScore}</p>
