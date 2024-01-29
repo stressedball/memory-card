@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ContextType, ProviderContext } from "./Provider";
+import "./assets/css/new-game.css";
 
 export function NewGame() {
   const { handleIsGame, handleDifficulty } = useContext(
@@ -20,17 +21,17 @@ export function NewGame() {
         </p>
         <p>Good Luck!</p>
       </section>
-      <section>
+      <section id="difficulty">
         <p>Select Difficulty</p>
         <div>
           <button onClick={() => handleDifficulty(1)}>
-            Easy (level * 1 card)
+            Easy
           </button>
           <button onClick={() => handleDifficulty(2)}>
-            Medium (level * 2 cards)
+            Medium
           </button>
           <button onClick={() => handleDifficulty(3)}>
-            Hard (level * 3 cards)
+            Hard
           </button>
         </div>
       </section>

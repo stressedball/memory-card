@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import "./App.css";
 import { ProviderContext, ContextType } from "./Provider";
-import { NewGame } from "./Newgame";
+import { NewGame } from "./NewGame";
 import { EndGame } from "./EndGame";
 import { Game } from "./Game";
 
