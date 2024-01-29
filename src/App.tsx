@@ -6,10 +6,16 @@ import { EndGame } from "./EndGame";
 import { Game } from "./Game";
 
 function App() {
-  const { isGame, isEndGame } = useContext(
-    ProviderContext
-  ) as ContextType;
-  return <>{!isGame ? <NewGame /> : isEndGame ? <EndGame /> : <Game />}</>;
+  const { isGame, isEndGame } = useContext(ProviderContext) as ContextType;
+  return (
+    <>
+      <header>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+      </header>
+      {!isGame ? <NewGame /> : isEndGame ? <EndGame /> : <Game />}
+    </>
+  );
 }
 
 export default App;
