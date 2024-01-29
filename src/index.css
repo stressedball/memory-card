@@ -81,3 +81,11 @@ button:focus-visible {
     border: 2px solid white;
     border-radius: 1rem;
 }
+
+.lightsaber {
+    width: 3rem;
+
+    &.done {
+        filter: contrast(1.55);
+    }
+}
