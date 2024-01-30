@@ -10,56 +10,6 @@
 body {
 }
 
-svg {
-  fill: #f9f9f9;
-}
-
-button {
-  font-size: 1.1rem;
-  padding: 1rem;
-}
-
-.deck {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card-container {
-  cursor: pointer;
-  width: 200px;
-  height: 200px;
-  border: 2px solid;
-  border-color: #f9f9f9;
-  border-radius: 1rem;
-  overflow: hidden;
-  & img {
-    border-radius: 1rem;
-    width: 100%;
-  }
-
-  &:hover {
-    background-color: darkgray;
-  }
-}
-
-.lightsaber {
-  width: 3rem;
-  height: 3rem;
-  fill: #242424;
-
-  &.done {
-    fill: red;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-  }
 
 
-  .card-container {
-    border-color: #242424;
-  }
-}
+

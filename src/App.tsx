@@ -10,8 +10,10 @@ function App() {
   return (
     <>
       <header>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
+        <button>
+          <a href="/">Home</a>
+        </button>
+        <button onClick={() => {}}>About</button>
       </header>
       {!isGame ? <NewGame /> : isEndGame ? <EndGame /> : <Game />}
     </>

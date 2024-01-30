@@ -1,7 +1,13 @@
-h1 {
-    padding: 6rem 0;
-    font-size: 3em;
-    line-height: 1.1;
+#instructions {
+    & > p {
+        font-weight: 600;
+        font-size: 1.6rem;
+        padding-bottom: 1rem;
+    }
+
+    & div {
+        padding: 0.5rem;
+    }
 }
 
 #difficulty {
@@ -21,7 +27,27 @@ h1 {
             padding: 1rem;
             font-size: 1.1rem;
             border: none;
+
+            &.selected {
+                background-color: bisque;
+            }
         }
+    }
+}
+
+#arrow {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    animation: wavy 1200ms alternate infinite;
+}
+
+@keyframes wavy {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 

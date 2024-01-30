@@ -1,4 +1,3 @@
-import LightSaberElement from "../public/lightsaber.svg";
 import { useContext, useState, useEffect } from "react";
 import { ProviderContext, ContextType } from "./Provider";
 export default function LightSaber(props: { index: number }) {
@@ -12,10 +11,6 @@ export default function LightSaber(props: { index: number }) {
 
   return (
     <>
-      {/* <img
-        alt="light-saber icon"
-        src={LightSaberElement}
-    /> */}
       <svg
         key={props.index}
         className={`lightsaber ${isDone ? "done" : ""}`}

@@ -2,6 +2,7 @@ import { ReactNode, useContext, useEffect, useState } from "react";
 import { ContextType, ProviderContext } from "./Provider";
 import LightSaber from "./LightSaber";
 import Deck from "./Deck";
+import "./assets/css/game.css";
 
 export function Game() {
   const { level, lives } = useContext(ProviderContext) as ContextType;
@@ -17,13 +18,9 @@ export function Game() {
 
   return (
     <>
-      <h1>Game!</h1>
       <div>
-        <p>Level {level}</p>
-        <div>
-          <p>Number of lives</p>
+        <h2>Level {level}</h2>
           <div>{livesIcons}</div>
-        </div>
       </div>
       <Deck />
     </>

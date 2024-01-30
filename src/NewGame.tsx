@@ -1,41 +1,52 @@
-import { useContext } from "react";
+import {  useContext } from "react";
 import { ContextType, ProviderContext } from "./Provider";
 import "./assets/css/new-game.css";
+import ScrollArrow from "./ScrollArrow";
 
 export function NewGame() {
-  const { handleIsGame, handleDifficulty } = useContext(
+  const { difficulty, handleIsGame, handleDifficulty } = useContext(
     ProviderContext
   ) as ContextType;
 
   return (
     <>
       <h1>Memory Card Game!</h1>
-      <section>
+      <section id="instructions">
         <p>How To Play</p>
-        <p>
-          On each level select every card <em>once</em>.
-        </p>
-        <p>
-          If you click twice on the same card, you'll lose a live. 3 lives in
-          total.
-        </p>
-        <p>Good Luck!</p>
+        <div>
+          <p>
+            On <u>each</u> level select every card{" "}
+            <em>
+              <strong>once</strong>
+            </em>
+            .
+          </p>
+        </div>
       </section>
       <section id="difficulty">
-        <p>Select Difficulty</p>
         <div>
-          <button onClick={() => handleDifficulty(1)}>
+          <button
+            onClick={() => handleDifficulty(1)}
+            className={`${difficulty === 1 ? "selected" : ""}`}
+          >
             Easy
           </button>
-          <button onClick={() => handleDifficulty(2)}>
+          <button
+            onClick={() => handleDifficulty(2)}
+            className={`${difficulty === 2 ? "selected" : ""}`}
+          >
             Medium
           </button>
-          <button onClick={() => handleDifficulty(3)}>
+          <button
+            onClick={() => handleDifficulty(3)}
+            className={`${difficulty === 3 ? "selected" : ""}`}
+          >
             Hard
           </button>
         </div>
       </section>
       <button onClick={handleIsGame}>Start New Game</button>
+      <ScrollArrow />
     </>
   );
 }
