@@ -1,53 +1,77 @@
 #instructions {
-    & > p {
-        font-weight: 600;
-        font-size: 1.6rem;
-        padding-bottom: 1rem;
-    }
+  & > p {
+    font-weight: 600;
+    font-size: 1.6em;
+    padding-bottom: 1em;
+    color: var(--primary);
+  }
 
-    & div {
-        padding: 0.5rem;
-    }
+  & div {
+    padding: 0.5em;
+  }
 }
 
 #difficulty {
-    & div {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        width: 100%;
-        padding: 1rem;
-    
-        & button {
-            border-radius: 50%;
-            height: 6.2rem;
-            width: 6.2rem;
-            padding: 1rem;
-            font-size: 1.1rem;
-            border: none;
+  & div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    width: 100%;
+    padding: 1em;
 
-            &.selected {
-                background-color: bisque;
-            }
+    & button {
+      border-radius: 50%;
+      height: 6.2em;
+      width: 6.2em;
+      padding: 1em;
+      font-size: 1.1em;
+      font-weight: 600;
+      border: none;
+
+      &.selected {
+        color: white;
+        &.easy {
+          background-color: #75cf48;
         }
+        &.medium {
+          background-color: #f9a643;
+        }
+        &.hard {
+          background-color: red;
+        }
+      }
     }
+  }
 }
 
 #arrow {
-    position: absolute;
-    bottom: 0;
-    right: 10%;
-    animation: wavy 1200ms alternate infinite;
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  /* animation: wavy 1800ms infinite alternate ease-in-out; */
+
+  &.fade-out {
+    animation: wavy 1000ms forwards ease-in-out;
+  }
 }
 
 @keyframes wavy {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
+@keyframes slideOut {
+  from {
+    translate: (0, 0);
+  }
+  to {
+    transform: translate(500%, 0);
+    opacity: 0;
+  }
+}

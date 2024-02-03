@@ -1,21 +1,48 @@
+import { useEffect, useState } from "react";
+
+// purely to set the arrow indicator for mobile users to hint them to scroll down
 export default function ScrollArrow() {
+  const [displayArrow, setDisplayArrow] = useState(false);
+  const [removeArrow, setRemoveArrow] = useState(false);
+  // on scroll event hide/display arrow
+  useEffect(() => {
+    const handleRemoveArrow = () => {
+      setRemoveArrow(true);
+    };
+    window.addEventListener("scroll", handleRemoveArrow);
+    return () => {
+      window.removeEventListener("scroll", handleRemoveArrow);
+      // check general position (if desktop screen no need to place the arrow)
+      if (checkButtonPosition()) setDisplayArrow(true);
+    };
+  }, []);
+
   return (
     <>
-      <svg
-        id="arrow"
-        width="30px"
-        height="30px"
-        viewBox="0 0 15 15"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M3.85355 2.14645C3.65829 1.95118 3.34171 1.95118 3.14645 2.14645C2.95118 2.34171 2.95118 2.65829 3.14645 2.85355L7.14645 6.85355C7.34171 7.04882 7.65829 7.04882 7.85355 6.85355L11.8536 2.85355C12.0488 2.65829 12.0488 2.34171 11.8536 2.14645C11.6583 1.95118 11.3417 1.95118 11.1464 2.14645L7.5 5.79289L3.85355 2.14645ZM3.85355 8.14645C3.65829 7.95118 3.34171 7.95118 3.14645 8.14645C2.95118 8.34171 2.95118 8.65829 3.14645 8.85355L7.14645 12.8536C7.34171 13.0488 7.65829 13.0488 7.85355 12.8536L11.8536 8.85355C12.0488 8.65829 12.0488 8.34171 11.8536 8.14645C11.6583 7.95118 11.3417 7.95118 11.1464 8.14645L7.5 11.7929L3.85355 8.14645Z"
-          fill="currentColor"
-        />
-      </svg>
+      {displayArrow ? (
+        <div id="arrow" className={`${removeArrow ? "fade-out" : ""}`}>
+          <svg
+            width="35px"
+            height="35px"
+            fill="none"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      ) : null}
     </>
   );
+}
+
+function checkButtonPosition() {
+  const startButton = document.querySelector("#difficulty + button");
+  if (!startButton) return;
+  if (window.innerHeight <= startButton.getBoundingClientRect().top) {
+    return true;
+  }
 }

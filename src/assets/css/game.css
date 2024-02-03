@@ -1,13 +1,13 @@
 h2 {
-  padding: 2rem;
+  padding: 2em;
 }
 
 .deck {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 2em 0;
 }
 
 .card-container {
@@ -16,10 +16,10 @@ h2 {
   height: min(33%, 200px);
   border: 2px solid;
   border-color: #f9f9f9;
-  border-radius: 1rem;
+  border-radius: 1em;
   overflow: hidden;
   & img {
-    border-radius: 1rem;
+    border-radius: 1em;
     width: 100%;
   }
 
@@ -29,8 +29,8 @@ h2 {
 }
 
 .lightsaber {
-  width: 3rem;
-  height: 3rem;
+  width: 3em;
+  height: 3em;
   fill: #242424;
 
   &.done {

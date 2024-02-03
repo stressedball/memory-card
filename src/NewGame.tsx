@@ -27,25 +27,25 @@ export function NewGame() {
         <div>
           <button
             onClick={() => handleDifficulty(1)}
-            className={`${difficulty === 1 ? "selected" : ""}`}
+            className={`easy ${difficulty === 1 ? "selected" : ""}`}
           >
             Easy
           </button>
           <button
             onClick={() => handleDifficulty(2)}
-            className={`${difficulty === 2 ? "selected" : ""}`}
+            className={`medium ${difficulty === 2 ? "selected" : ""}`}
           >
             Medium
           </button>
           <button
             onClick={() => handleDifficulty(3)}
-            className={`${difficulty === 3 ? "selected" : ""}`}
+            className={`hard ${difficulty === 3 ? "selected" : ""}`}
           >
             Hard
           </button>
         </div>
       </section>
-      <button onClick={handleIsGame}>Start New Game</button>
+      <button className="standard" onClick={handleIsGame}>Start New Game</button>
       <ScrollArrow />
     </>
   );

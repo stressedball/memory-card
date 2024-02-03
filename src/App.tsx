@@ -10,10 +10,10 @@ function App() {
   return (
     <>
       <header>
-        <button>
+        <button className="standard">
           <a href="/">Home</a>
         </button>
-        <button onClick={() => {}}>About</button>
+        <button className="standard" onClick={() => {}}>About</button>
       </header>
       {!isGame ? <NewGame /> : isEndGame ? <EndGame /> : <Game />}
     </>

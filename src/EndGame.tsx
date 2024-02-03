@@ -14,7 +14,7 @@ export function EndGame() {
           You cleared {level - 1} {level - 1 > 1 ? "levels" : "level"}
         </p>
       )}
-      <button onClick={makeNewGame}>Start New Game</button>
+      <button className="standard" onClick={makeNewGame}>Start New Game</button>
     </>
   );
 }
