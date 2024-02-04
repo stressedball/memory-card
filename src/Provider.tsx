@@ -18,7 +18,7 @@ export function Provider({ children }: ProviderProps) {
   const handleLives = () => setLives((prev) => prev - 1);
   const handleDifficulty = (val: number) => setDifficulty(val);
   const makeNewGame = () => {
-    setIsGame(true);
+    setIsGame(false);
     setIsEndGame(false);
     setLevel(1);
     setLives(3);

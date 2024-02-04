@@ -16,10 +16,6 @@ header {
   justify-content: center;
   border-bottom: 2px solid;
   padding: 1em 0;
-
-  & button {
-
-  }
 }
 
 a {
@@ -36,6 +32,7 @@ svg {
 button {
   font-size: 1.1em;
   padding: 1em;
+  cursor: pointer;
 
   &.standard {
     background-color: var(--primary);
@@ -53,6 +50,24 @@ button {
   padding-bottom: 1em;
 }
 
-@media screen { 
-  
+#about {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(128, 128, 128, 0.322);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > div {
+    border-radius: 1em;
+    background-color: white;
+    padding: 1em;
+  }
+}
+
+@media screen {
 }
